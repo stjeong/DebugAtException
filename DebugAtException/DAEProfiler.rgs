@@ -1,0 +1,16 @@
+HKCR
+{
+	NoRemove CLSID
+	{
+		ForceRemove {9aa43723-a2fd-4886-ba0c-ab1897214dc6} = s 'DAEProfiler class'
+		{
+			ForceRemove Programmable
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Both'
+			}
+			TypeLib = s '{4fc3ab69-b991-4796-9fe3-5fad6b304b25}'
+			Version = s '1.0'
+		}
+	}
+}

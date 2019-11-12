@@ -1,0 +1,36 @@
+// mstestEnabler.idl : IDL source for mstestEnabler
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (mstestEnabler.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	object,
+	uuid(82a8e8b9-3613-42af-a487-0b7babfe968f),
+	dual,
+	nonextensible,
+	pointer_default(unique)
+]
+interface IDAEProfiler : IDispatch
+{
+};
+[
+	uuid(4fc3ab69-b991-4796-9fe3-5fad6b304b25),
+	version(1.0),
+]
+library DebugAtExceptionLib
+{
+	importlib("stdole2.tlb");
+	[
+		uuid(9aa43723-a2fd-4886-ba0c-ab1897214dc6)
+	]
+	coclass DAEProfiler
+	{
+		[default] interface IDAEProfiler;
+	};
+};
+
+import "shobjidl.idl";
